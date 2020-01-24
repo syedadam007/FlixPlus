@@ -13,9 +13,14 @@
 		E6FAD87E23DA946800F9F0CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6FAD87D23DA946800F9F0CC /* Assets.xcassets */; };
 		E6FAD88123DA946800F9F0CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6FAD87F23DA946800F9F0CC /* LaunchScreen.storyboard */; };
 		E6FAD88923DA954500F9F0CC /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FAD88823DA954500F9F0CC /* MoviesViewController.swift */; };
+		E6FAD88B23DABD4E00F9F0CC /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FAD88A23DABD4E00F9F0CC /* MovieCell.swift */; };
+		EC2434CE00431F530DA3598A /* Pods_FlixPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7791E5601C6D61E24BEE3471 /* Pods_FlixPlus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7791E5601C6D61E24BEE3471 /* Pods_FlixPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlixPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A9F779288DD25679449D12 /* Pods-FlixPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixPlus.debug.xcconfig"; path = "Target Support Files/Pods-FlixPlus/Pods-FlixPlus.debug.xcconfig"; sourceTree = "<group>"; };
+		DB5AC74CDC5C72F1EDBBEE9E /* Pods-FlixPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixPlus.release.xcconfig"; path = "Target Support Files/Pods-FlixPlus/Pods-FlixPlus.release.xcconfig"; sourceTree = "<group>"; };
 		E6FAD87123DA946700F9F0CC /* FlixPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlixPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FAD87423DA946700F9F0CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6FAD87623DA946700F9F0CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		E6FAD88023DA946800F9F0CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6FAD88223DA946800F9F0CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6FAD88823DA954500F9F0CC /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		E6FAD88A23DABD4E00F9F0CC /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2434CE00431F530DA3598A /* Pods_FlixPlus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FC67DD32B2C1961E07861B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7791E5601C6D61E24BEE3471 /* Pods_FlixPlus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C223F895CFCFDE7A76E6FB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4A9F779288DD25679449D12 /* Pods-FlixPlus.debug.xcconfig */,
+				DB5AC74CDC5C72F1EDBBEE9E /* Pods-FlixPlus.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E6FAD86823DA946700F9F0CC = {
 			isa = PBXGroup;
 			children = (
 				E6FAD87323DA946700F9F0CC /* FlixPlus */,
 				E6FAD87223DA946700F9F0CC /* Products */,
+				6C223F895CFCFDE7A76E6FB8 /* Pods */,
+				4FC67DD32B2C1961E07861B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +86,7 @@
 				E6FAD87423DA946700F9F0CC /* AppDelegate.swift */,
 				E6FAD87623DA946700F9F0CC /* SceneDelegate.swift */,
 				E6FAD87A23DA946700F9F0CC /* Main.storyboard */,
+				E6FAD88A23DABD4E00F9F0CC /* MovieCell.swift */,
 				E6FAD87D23DA946800F9F0CC /* Assets.xcassets */,
 				E6FAD87F23DA946800F9F0CC /* LaunchScreen.storyboard */,
 				E6FAD88223DA946800F9F0CC /* Info.plist */,
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6FAD88523DA946800F9F0CC /* Build configuration list for PBXNativeTarget "FlixPlus" */;
 			buildPhases = (
+				3DF20283B885C8297077E09B /* [CP] Check Pods Manifest.lock */,
 				E6FAD86D23DA946700F9F0CC /* Sources */,
 				E6FAD86E23DA946700F9F0CC /* Frameworks */,
 				E6FAD86F23DA946700F9F0CC /* Resources */,
+				4E6849406C6B8D36A761293B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +163,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DF20283B885C8297077E09B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlixPlus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E6849406C6B8D36A761293B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlixPlus/Pods-FlixPlus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlixPlus/Pods-FlixPlus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlixPlus/Pods-FlixPlus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E6FAD86D23DA946700F9F0CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +212,7 @@
 			files = (
 				E6FAD87523DA946700F9F0CC /* AppDelegate.swift in Sources */,
 				E6FAD87723DA946700F9F0CC /* SceneDelegate.swift in Sources */,
+				E6FAD88B23DABD4E00F9F0CC /* MovieCell.swift in Sources */,
 				E6FAD88923DA954500F9F0CC /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +355,7 @@
 		};
 		E6FAD88623DA946800F9F0CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A9F779288DD25679449D12 /* Pods-FlixPlus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -293,12 +367,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.syedadam.FlixPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E6FAD88723DA946800F9F0CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB5AC74CDC5C72F1EDBBEE9E /* Pods-FlixPlus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,7 +385,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.syedadam.FlixPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import AlamofireImage
 
-class MoviesViewController: UIViewController {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    @IBOutlet weak var tableView: UITableView!
     
     var movies = [[String: Any]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
 
         // Do any additional setup after loading the view.
         print("Hello")
@@ -30,6 +36,8 @@ class MoviesViewController: UIViewController {
             
             self.movies = dataDictionary["results"] as! [[String: Any]]
             
+            self.tableView.reloadData()
+            
             print(dataDictionary)
             
               // TODO: Get the array of movies
@@ -40,6 +48,29 @@ class MoviesViewController: UIViewController {
         }
         task.resume()
         
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movies.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
+        
+        let movie = movies[indexPath.row]
+        let title = movie["title"] as! String
+        let synopsis = movie["overview"] as! String
+        
+        cell.titleLabel.text = title
+        cell.synopsisLabel.text = synopsis
+        
+        let baseUrl = "https://image.tmdb.org/t/p/w185"
+        let posterPath = movie["poster_path"] as! String
+        let posterUrl = URL(string: baseUrl + posterPath)
+        
+        cell.posterView.af_setImage(withURL: posterUrl!)
+        
+        return cell
     }
     
 
