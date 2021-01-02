@@ -9,9 +9,9 @@ FlixPlus is an app that allows users to browse movies from [The Movie Database A
 - [ ] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
 - [ ] User can tap a poster in the collection view to see a detail screen of that movie.
 - [ ] In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
-- [ ] (2pts) User sees an app icon on the home screen and a styled launch screen.
-- [ ] (5pts) User can view and scroll through a list of movies now playing in theaters.
-- [ ] (3pts) User can view the movie poster image for each movie.
+- [ ] User sees an app icon on the home screen and a styled launch screen.
+- [ ] User can view and scroll through a list of movies now playing in theaters.
+- [ ] User can view the movie poster image for each movie.
 
 ### App Walkthough GIF Part I
 `TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
